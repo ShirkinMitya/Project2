@@ -43,7 +43,7 @@ public class MathFormuls {
         return sd.evaluate(sample) / mean;
     }
 
-    public static ConfidenceInterval calculationConfidanceInterval(double[] sample, double alpha) {//?
+    public static ConfidenceInterval calculationConfidanceInterval(double[] sample, double alpha) {
         StandardDeviation sd = new StandardDeviation();
         double mean = StatUtils.mean(sample);
         double standartDeviation = sd.evaluate(sample);
