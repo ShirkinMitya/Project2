@@ -10,8 +10,8 @@ public class Manager {
         storage.loadResults(fileName);
     }
 
-    public void Import(String fileName) throws IOException {
-        storage.loadData(fileName);
+    public void Import(String fileName, String sheetNameOrIndex, boolean isIndex) throws IOException {
+        storage.loadData(fileName, sheetNameOrIndex, isIndex);
     }
 
     public Storage getStorage() {

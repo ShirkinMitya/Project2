@@ -9,9 +9,9 @@ public class Storage {
     private Map<String, double[]> data = new HashMap<>();
     private Map<String, double[]> processedData = new HashMap<>();
 
-    public void loadData(String filename) throws IOException {
+    public void loadData(String filename, String sheetNameorIndex, boolean isIndex) throws IOException {
         Reader reader = new Reader();
-        data = reader.read(filename, 2);
+        data = reader.read(filename, sheetNameorIndex, isIndex);
     }
 
     public void loadResults(String fileName) throws IOException {
@@ -23,9 +23,4 @@ public class Storage {
     public Map<String, double[]> getData() {
         return data;
     }
-
-    //public Map<String, double[]> getProcessedData() {
-    //    return processedData;
-    //}
-    
 }

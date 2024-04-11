@@ -14,14 +14,19 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Reader {
 
-    public Map<String, double[]> read(String fileName, int sheetIndex) throws FileNotFoundException, IOException {
+    public Map<String, double[]> read(String fileName, String sheetNameorIndex, boolean isIndex) throws FileNotFoundException, IOException {
         Map<String, double[]> excelData = new HashMap<>();
         Map<String, List<Double>> data = new HashMap<>();
         XSSFWorkbook myBook = new XSSFWorkbook(new FileInputStream(fileName));
-        XSSFSheet sheet = myBook.getSheetAt(sheetIndex);
+        XSSFSheet sheet;
+        if (isIndex == true) {
+            sheet = myBook.getSheetAt(Integer.parseInt(sheetNameorIndex.trim()));
+        } else {
+            sheet = myBook.getSheet(sheetNameorIndex.trim());
+        }
         Row headerRow = sheet.getRow(0);
         for (Cell cell : headerRow) {
-            data.put(cell.getStringCellValue(), new ArrayList<>()); 
+            data.put(cell.getStringCellValue(), new ArrayList<>());
         }
         for (int i = 1; i <= sheet.getLastRowNum(); i++) {
             Row row = sheet.getRow(i);
