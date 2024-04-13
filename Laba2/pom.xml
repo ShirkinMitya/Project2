@@ -26,7 +26,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        com.mypackage.Main
+                                     shirkin.laba2.Laba2   
                                     </mainClass>
                                 </manifest>
                             </archive>
