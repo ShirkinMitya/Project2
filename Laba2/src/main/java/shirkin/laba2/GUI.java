@@ -159,8 +159,8 @@ public class GUI extends javax.swing.JFrame {
                         TextFieldForVariant.getText(), RadioButtonIsIndex.isSelected());
             }catch(NullPointerException | NumberFormatException e){
                  JOptionPane.showMessageDialog(this, "Вариант указан неверно");    
-            }catch(NotOfficeXmlFileException | InvalidFormatException e){
-                 JOptionPane.showMessageDialog(this, "Указан неверный формат файла");
+            }catch(NotOfficeXmlFileException | InvalidFormatException | IllegalStateException e){
+                 JOptionPane.showMessageDialog(this, "Указан неверный файл");
             } catch (FileNotFoundException e) {
                  JOptionPane.showMessageDialog(this, "Системе не удается найти указанный путь");    
             } catch (IOException e) {
