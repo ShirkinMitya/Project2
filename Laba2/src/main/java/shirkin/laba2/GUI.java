@@ -24,11 +24,9 @@ public class GUI extends javax.swing.JFrame {
         ButtonExport = new javax.swing.JButton();
         ButtonImport = new javax.swing.JButton();
         ButtonExit = new javax.swing.JButton();
-        FieldPathToFile = new javax.swing.JTextField();
-        TextInfo = new javax.swing.JTextField();
         TextFieldForVariant = new javax.swing.JTextField();
         RadioButtonIsIndex = new javax.swing.JRadioButton();
-        TextFieldInfoForVariant = new javax.swing.JTextField();
+        LabelVariant = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,95 +51,70 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        FieldPathToFile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FieldPathToFileActionPerformed(evt);
-            }
-        });
-
-        TextInfo.setText("Введите путь к файлу");
-        TextInfo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextInfoActionPerformed(evt);
-            }
-        });
-
-        RadioButtonIsIndex.setText("Выбрать варинат по индексу");
+        RadioButtonIsIndex.setText("Выбрать варинат числом");
         RadioButtonIsIndex.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RadioButtonIsIndexActionPerformed(evt);
             }
         });
 
-        TextFieldInfoForVariant.setText("Введите вариант текстом");
-        TextFieldInfoForVariant.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextFieldInfoForVariantActionPerformed(evt);
-            }
-        });
+        LabelVariant.setText("Введите вариант текстом");
 
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
         PanelLayout.setHorizontalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(174, 174, 174)
+                .addComponent(LabelVariant, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ButtonExit)
                 .addGap(15, 15, 15))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLayout.createSequentialGroup()
+                .addContainerGap(149, Short.MAX_VALUE)
+                .addComponent(TextFieldForVariant, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(RadioButtonIsIndex)
+                .addGap(47, 47, 47))
             .addGroup(PanelLayout.createSequentialGroup()
                 .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelLayout.createSequentialGroup()
                         .addGap(24, 24, 24)
-                        .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ButtonImport)
-                            .addComponent(ButtonExport))
-                        .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelLayout.createSequentialGroup()
-                                .addGap(75, 75, 75)
-                                .addComponent(TextInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PanelLayout.createSequentialGroup()
-                                .addGap(44, 44, 44)
-                                .addComponent(TextFieldInfoForVariant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(ButtonImport))
                     .addGroup(PanelLayout.createSequentialGroup()
-                        .addGap(102, 102, 102)
-                        .addComponent(FieldPathToFile, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(208, 208, 208)
+                        .addComponent(ButtonExport)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLayout.createSequentialGroup()
-                .addContainerGap(149, Short.MAX_VALUE)
-                .addComponent(TextFieldForVariant, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addComponent(RadioButtonIsIndex)
-                .addContainerGap())
         );
         PanelLayout.setVerticalGroup(
             PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(ButtonExit)
-                .addGap(41, 41, 41)
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonImport)
-                    .addComponent(TextFieldInfoForVariant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextFieldForVariant, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RadioButtonIsIndex))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonExport)
-                    .addComponent(TextInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(FieldPathToFile, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
+                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(ButtonExit))
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(LabelVariant, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(ButtonImport))
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TextFieldForVariant, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(RadioButtonIsIndex))))
+                .addGap(64, 64, 64)
+                .addComponent(ButtonExport)
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,7 +126,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void ButtonImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonImportActionPerformed
         if (TextFieldForVariant.getText().trim().isBlank()) {
-            JOptionPane.showMessageDialog(this, "Укажити вариант");
+            JOptionPane.showMessageDialog(this, "Укажите вариант");
             return;
         }
         JFileChooser fileChooser = new JFileChooser();
@@ -170,7 +143,7 @@ public class GUI extends javax.swing.JFrame {
             } catch (NotOfficeXmlFileException e) {
                 JOptionPane.showMessageDialog(this, "Указан неверный формат файла");
             } catch (IllegalArgumentException e) {
-                JOptionPane.showMessageDialog(this, "Вариант указан неверно(нет листа по такому индексу)");        
+                JOptionPane.showMessageDialog(this, "Вариант указан неверно(нет листа по такому индексу)");
             } catch (IllegalStateException e) {
                 JOptionPane.showMessageDialog(this, "Выбран не тот файл");
             } catch (FileNotFoundException e) {
@@ -186,17 +159,21 @@ public class GUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "вы ещё не загрузили данные");
             return;
         }
-        File file = new File(FieldPathToFile.getText() + ".xlsx");
-        if (!file.isAbsolute()) {
-            JOptionPane.showMessageDialog(this, "Вы не указали путь");
-            return;
-        }
-        try {
-            manager.Export(FieldPathToFile.getText()+ ".xlsx");
-        } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Вы неверно указали путь для сохранения");
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "Произошла ошибка при записи файла");
+        JFileChooser fileChooser = new JFileChooser();
+        int window = fileChooser.showDialog(this, "Выберете файл");
+        if (window == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String filePath = selectedFile.getAbsolutePath();
+            if (!filePath.toLowerCase().endsWith(".xlsx")) {
+                filePath += ".xlsx";
+            }
+            try {
+                manager.Export(filePath);
+            } catch (FileNotFoundException e) {
+                JOptionPane.showMessageDialog(null, "Произошла ошибка при записи файла");
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this, "Произошла ошибка при записи файла");
+            }
         }
     }//GEN-LAST:event_ButtonExportActionPerformed
 
@@ -204,37 +181,23 @@ public class GUI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_ButtonExitActionPerformed
 
-    private void FieldPathToFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldPathToFileActionPerformed
-
-    }//GEN-LAST:event_FieldPathToFileActionPerformed
-
-    private void TextInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextInfoActionPerformed
-
-    }//GEN-LAST:event_TextInfoActionPerformed
-
     private void RadioButtonIsIndexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RadioButtonIsIndexActionPerformed
         if (RadioButtonIsIndex.isSelected() == true) {
-            TextFieldInfoForVariant.setText("Введите вариант числом");
+            LabelVariant.setText("Введите вариант числом");
         }
         if (RadioButtonIsIndex.isSelected() == false) {
-            TextFieldInfoForVariant.setText("Введите вариант текстом");
+            LabelVariant.setText("Введите вариант текстом");
         }
     }//GEN-LAST:event_RadioButtonIsIndexActionPerformed
-
-    private void TextFieldInfoForVariantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldInfoForVariantActionPerformed
-
-    }//GEN-LAST:event_TextFieldInfoForVariantActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonExit;
     private javax.swing.JButton ButtonExport;
     private javax.swing.JButton ButtonImport;
-    private javax.swing.JTextField FieldPathToFile;
+    private javax.swing.JLabel LabelVariant;
     private javax.swing.JPanel Panel;
     private javax.swing.JRadioButton RadioButtonIsIndex;
     private javax.swing.JTextField TextFieldForVariant;
-    private javax.swing.JTextField TextFieldInfoForVariant;
-    private javax.swing.JTextField TextInfo;
     // End of variables declaration//GEN-END:variables
 }

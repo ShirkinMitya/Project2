@@ -20,9 +20,10 @@ public class Reader {
         XSSFWorkbook myBook = new XSSFWorkbook(new FileInputStream(fileName));
         XSSFSheet sheet;
         if (isIndex == true) {
+            int index = Integer.parseInt(sheetNameorIndex.trim()) - 1; 
             int numberOfSheets = myBook.getNumberOfSheets();
-            if (Integer.parseInt(sheetNameorIndex.trim()) <= numberOfSheets && Integer.parseInt(sheetNameorIndex.trim()) >= 0) {
-                sheet = myBook.getSheetAt(Integer.parseInt(sheetNameorIndex.trim()));
+            if (index  <= numberOfSheets && index >= 0) {
+                sheet = myBook.getSheetAt(index);
             } else {
                 throw new IllegalArgumentException();
             }
